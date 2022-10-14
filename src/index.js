@@ -5,10 +5,27 @@ import App from "./App";
 import "./assets/styles/index.scss";
 // components
 import Layout from "./components/Layout";
+// mui stuff
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Container } from "@mui/system";
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Quicksand"].join(","),
+    fontSize: 15,
+    fontWeightLight: 400,
+    fontWeightMedium: 500,
+    fontWeightRegular: 600,
+    fontWeightBold: 700,
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Layout>
-    <App />
-  </Layout>
+  <ThemeProvider theme={theme}>
+    <Layout>
+      <Container maxWidth="md">
+        <App />
+      </Container>
+    </Layout>
+  </ThemeProvider>
 );
