@@ -11,11 +11,6 @@
     border-radius: 7px;
     font-size: 17px;
     background-color: rgb(239, 239, 239);
-    position: relative;
-    &:after {
-      position: absolute;
-      content: "asd";
-    }
   }
   &:after {
     position: absolute;
