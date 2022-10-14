@@ -1,5 +1,7 @@
 // mui components
-import { Box, Divider } from "@mui/material";
+import { Box, Divider, Avatar } from "@mui/material";
+// faker
+import { faker } from "@faker-js/faker";
 // icons
 import { MdHomeFilled } from "react-icons/md";
 import { TbSend } from "react-icons/tb";
@@ -23,12 +25,22 @@ const Header = () => {
 
       <Box display="flex" alignItems="center">
         <input type="" placeholder="Search" style={{ marginRight: "130px" }} />
-        <Box className="header-icons-container">
+        <Box
+          className="header-icons-container"
+          display="flex"
+          alignItems="center"
+        >
           <MdHomeFilled />
           <TbSend />
           <CgAddR />
           <ImCompass2 />
           <FiHeart />
+          <Avatar
+            variant="circular"
+            src={faker.image.avatar()}
+            alt="profile"
+            sx={{ width: "25px", height: "25px", ml: 2 }}
+          />
         </Box>
       </Box>
     </Box>
