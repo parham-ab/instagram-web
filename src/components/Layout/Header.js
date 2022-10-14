@@ -1,5 +1,5 @@
 // mui components
-import { Box, Divider, Avatar } from "@mui/material";
+import { Box, Divider, Avatar, Typography } from "@mui/material";
 // faker
 import { faker } from "@faker-js/faker";
 // icons
@@ -18,13 +18,26 @@ const Header = () => {
       justifyContent="space-around"
       className="header"
     >
-      <Box display="flex" alignItems="center">
-        <h3>instagram</h3>
+      <Box display="flex" alignItems="center" sx={{ display: { xs: "none", sm: "flex" } }}>
+        <Typography
+          variant="h5"
+          color="initial"
+          component="h1"
+          className="title"
+        >
+          Instagram
+        </Typography>
         <BsChevronDown style={{ fontSize: "15", paddingLeft: 3 }} />
       </Box>
 
       <Box display="flex" alignItems="center">
-        <input type="" placeholder="Search" style={{ marginRight: "130px" }} />
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <input
+            type="text"
+            placeholder="Search"
+            style={{ marginRight: "130px" }}
+          />
+        </Box>
         <Box
           className="header-icons-container"
           display="flex"

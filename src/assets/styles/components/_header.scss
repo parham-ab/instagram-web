@@ -1,6 +1,9 @@
 .header {
   position: relative;
   padding: 10px 0;
+  .title {
+    font-family: "instagram3", "instagram", "instagram2", "instagram4";
+  }
   input {
     padding: 7px 16px;
     border: none;
@@ -26,6 +29,7 @@
   .header-icons-container {
     svg {
       font-size: 25px;
+      font-weight: 100;
       margin: 7px;
       cursor: pointer;
     }
