@@ -10,11 +10,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/system";
 const theme = createTheme({
   typography: {
-    fontFamily: ["Quicksand"].join(","),
+    fontFamily: ["M PLUS Rounded 1c", "sans-serif"].join(","),
     fontSize: 15,
-    fontWeightLight: 400,
-    fontWeightMedium: 500,
-    fontWeightRegular: 600,
+    fontWeightRegular: 400,
     fontWeightBold: 700,
   },
 });
