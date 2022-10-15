@@ -7,6 +7,8 @@ const App = () => {
   return (
     <Grid container display="flex" justifyContent="center">
       <Posts />
+      <Posts />
+      <Posts />
     </Grid>
   );
 };
