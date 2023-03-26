@@ -1,3 +1,4 @@
+import { useState } from "react";
 // faker stuff
 import { faker } from "@faker-js/faker";
 import { Avatar, Typography, Box, Grid } from "@mui/material";
@@ -7,6 +8,7 @@ import { TbSend } from "react-icons/tb";
 import { FiHeart } from "react-icons/fi";
 
 const Posts = () => {
+  const [isLiked, setIsLiked] = useState(false);
   return (
     <Grid item mt={10}>
       <Box
@@ -54,7 +56,16 @@ const Posts = () => {
         </Box>
         {/* like & share & cm & save */}
         <Box display="flex" alignItems="center" mt={2}>
-          <FiHeart style={{ margin: "0 5px", fontSize: "24px" }} />
+          <FiHeart
+            style={{
+              margin: "0 5px",
+              fontSize: "24px",
+              fill: isLiked && "red",
+              color: isLiked && "red",
+              cursor: "pointer",
+            }}
+            onClick={() => setIsLiked(!isLiked)}
+          />
           <BsChat style={{ margin: "0 5px", fontSize: "24px" }} />
           <TbSend style={{ margin: "0 5px", fontSize: "24px" }} />
         </Box>
